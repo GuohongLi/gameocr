@@ -1,0 +1,117 @@
+blue	#FF0000	0,0,255
+blueviolet	#E22B8A	138,43,226
+brown	#2A2AA5	165,42,42
+burlywood	#87B8DE	222,184,135
+chartreuse	#00FF7F	127,255,0
+coral	#507FFF	255,127,80
+cornflowerblue	#ED9564	100,149,237
+crimson	#3C14DC	220,20,60
+darkblue	#8B0000	0,0,139
+darkcyan	#8B8B00	0,139,139
+darkgoldenrod	#0B86B8	184,134,11
+darkgray	#A9A9A9	169,169,169
+darkgreen	#006400	0,100,0
+darkkhaki	#6BB7BD	189,183,107
+darkmagenta	#8B008B	139,0,139
+darkolivegreen	#2F6B55	85,107,47
+darkorange	#008CFF	255,140,0
+darkorchid	#CC3299	153,50,204
+darkred	#00008B	139,0,0
+darksalmon	#7A96E9
+darkseagreen	#8BBC8F
+darkslateblue	#8B3D48
+darkslategray	#4F4F2F
+darkturquoise	#D1CE00
+darkviolet	#D30094
+deeppink	#9314FF
+deepskyblue	#FFBF00
+dodgerblue	#FF901E
+firebrick	#2222B2
+floralwhite	#F0FAFF
+forestgreen	#228B22
+fuchsia	#FF00FF
+ghostwhite	#FFF8F8
+gold	#00D7FF
+goldenrod	#20A5DA
+gray	#808080
+green	#008000
+hotpink	#B469FF
+indianred	#5C5CCD
+indigo	#82004B
+khaki	#8CE6F0
+lawngreen	#00FC7C
+lightblue	#E6D8AD
+lightcoral	#8080F0
+lightcyan	#FFFFE0
+lightgoldenrodyellow	#D2FAFA
+lightgreen	#90EE90
+lightgrey	#D3D3D3
+lightpink	#C1B6FF
+lightseagreen	#AAB220
+lightskyblue	#FACE87
+lightslategray	#998877
+lightsteelblue	#DEC4B0
+lightyellow	#E0FFFF
+lime	#00FF00
+limegreen	#32CD32
+linen	#E6F0FA
+magenta	#FF00FF
+maroon	#000080
+mediumaquamarine	#AACD66
+mediumblue	#CD0000
+mediumorchid	#D355BA
+mediumpurple	#DB7093
+mediumseagreen	#71B33C
+mediumslateblue	#EE687B
+mediumspringgreen	#9AFA00
+mediumturquoise	#CCD148
+mediumvioletred	#8515C7
+midnightblue	#701919
+mintcream	#FAFFF5
+mistyrose	#E1E4FF
+moccasin	#B5E4FF
+navajowhite	#ADDEFF
+navy	#800000
+oldlace	#E6F5FD
+olive	#008080
+olivedrab	#238E6B
+orange	#00A5FF
+orangered	#0045FF
+orchid	#D670DA
+palegoldenrod	#AAE8EE
+palegreen	#98FB98
+paleturquoise	#EEEEAF
+palevioletred	#9370DB
+papayawhip	#D5EFFF
+peachpuff	#B9DAFF
+peru	#3F85CD
+pink	#CBC0FF
+plum	#DDA0DD
+powderblue	#E6E0B0
+purple	#800080
+red	#0000FF
+rosybrown	#8F8FBC
+royalblue	#E16941
+saddlebrown	#13458B
+salmon	#7280FA
+sandybrown	#60A4F4
+seagreen	#578B2E
+seashell	#EEF5FF
+sienna	#2D52A0
+silver	#C0C0C0
+skyblue	#EBCE87
+slateblue	#CD5A6A
+slategray	#908070
+snow	#FAFAFF
+springgreen	#7FFF00
+steelblue	#B48246
+tan	#8CB4D2
+teal	#808000
+thistle	#D8BFD8
+tomato	#4763FF
+turquoise	#D0E040
+violet	#EE82EE
+wheat	#B3DEF5
+white	#FFFFFF
+whitesmoke	#F5F5F5
+yellow	#00FFFF
