@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*- 
 import cv2
 import sys
+import matplotlib.pyplot as plt
 import numpy as np
 
 import os
@@ -34,6 +35,8 @@ def erosion_dialtion(binary):
 
 def binaryimg(img):
     hits,bin_edges = np.histogram(img,bins = 30,range = (0,255),density = False)
+    plt.plot(bin_edges[:-1], hits)
+    plt.show()
     sum_h = 0.0
     for h in hits:
     	sum_h += h
@@ -42,6 +45,8 @@ def binaryimg(img):
     for i in range(len(hits)):
     	now += hits[len(hits) - i -1]
     	cover.insert(0,now*1.0/sum_h)
+    plt.plot(bin_edges[:-1], cover)
+    plt.show()
     bin_index = 0
     for i in range(len(cover)):
     	if cover[i] < 0.10:#20%
@@ -51,20 +56,34 @@ def binaryimg(img):
     #binary = cv2.bitwise_not(binary)
     return binary
 
+def binaryimg_max(img):
+    hits,bin_edges = np.histogram(img,bins = 30,range = (0,255),density = False)
+    max_index = hits[15:].argsort()[-3:][::-1]
+    print max_index
+    plt.plot(bin_edges[:-1], hits, 'b*')
+    plt.plot(bin_edges[:-1], hits, 'r')
+    plt.show()
+    ret, binary = cv2.threshold(img, bin_edges[15+max_index[-1]], 255, cv2.THRESH_BINARY)
+    #binary = cv2.bitwise_not(binary)
+    return binary
+
 def preprocess(gray):
-    gaussian = cv2.GaussianBlur(gray, (3, 3), 0, 0, cv2.BORDER_DEFAULT)
-    median = cv2.medianBlur(gaussian, 5)
+    #gaussian = cv2.GaussianBlur(gray, (3, 3), 0, 0, cv2.BORDER_DEFAULT)
+    #median = cv2.medianBlur(gaussian, 5)
+    median = gray
     sobel_x = cv2.Sobel(median, cv2.CV_8U, 1, 0, ksize = 3)
     sobel_y = cv2.Sobel(median, cv2.CV_8U, 0, 1, ksize = 3)
     #gradient = cv2.subtract(sobel_x, sobel_y)
     gradient = cv2.add(sobel_x, sobel_y)
     gradient = cv2.convertScaleAbs(gradient)
-    cv2.imshow('gradient',gradient)
-    cv2.waitKey(0)
+    #cv2.imshow('gradient',gradient)
+    #cv2.waitKey(0)
     #blurred = cv2.blur(gradient, (5, 5))
     #cv2.imshow('blurred',blurred)
     #cv2.waitKey(0)
-    binary = binaryimg(gradient)
+    #binary = binaryimg(gradient)
+    #binary = binaryimg_max(median)
+    binary = binaryimg_max(gradient)
     cv2.imshow('binary',binary)
     cv2.waitKey(0)
     erosion_dialtion(binary)
@@ -74,6 +93,7 @@ def preprocess(gray):
 
 def find_ch_location(img):
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+    print gray.shape
     dilation = preprocess(gray)
     
 
